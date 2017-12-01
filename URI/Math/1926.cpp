@@ -1,4 +1,3 @@
-//22:00
 #include<bits/stdc++.h>
 #define MAX 1000100
 
