@@ -27,7 +27,6 @@ int solve(int a, int b, int c){
 	}	
 	
 	return memo[a][b][c] = 0; 	
-
 }
 
 int main(){
@@ -35,14 +34,12 @@ int main(){
 	while(scanf("%d", &n) && n!=0){
 		
 		memset(memo, -1, sizeof(memo));
-		for(int i=0; i<n; i++){
-			scanf("%d %d %d", &pilha[0][i], &pilha[1][i], &pilha[2][i]);
-		}			
-		printf("%d\n", solve(0, 0, 0));
 		
-		
-	}		
-	
+		for(int i=0; i<n; i++)
+			scanf("%d %d %d", &pilha[0][i], &pilha[1][i], &pilha[2][i]);		
+				
+		printf("%d\n", solve(0, 0, 0));	
+	}			
 
 	return 0;
 }
