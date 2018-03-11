@@ -40,7 +40,7 @@ typedef pair<int, int> ii;
 typedef pair<ii, int> iii;
 typedef vector<int>    vi;
 typedef vector<ii>    vii;
-typedef vector<iii>  viii
+typedef vector<iii>  viii;
 ///////////////////////////////////////////////////////////////////////////////
 
 int main(){
