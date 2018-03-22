@@ -39,6 +39,28 @@ typedef vector<iii>  viii;
 ///////////////////////////////////////////////////////////////////////////////
 
 int main(){
+	int n, m;
+	
+	while(scanf("%d %d", &n, &m) && (n!=0 || m!=0)){
+		set<int> s;
 		
+		fori(i, 0, n){
+			int u;
+			scanf("%d", &u);
+			s.insert(u);
+		}
+		
+		int ans = 0;
+		fori(i, 0, m){
+			int u;
+			scanf("%d", &u);
+			auto it = s.find(u);
+			
+			if(it != s.end()) ans++;
+		}
+		printf("%d\n", ans);
+	
+	}
+	
 	return 0;
 }

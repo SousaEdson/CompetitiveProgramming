@@ -39,6 +39,23 @@ typedef vector<iii>  viii;
 ///////////////////////////////////////////////////////////////////////////////
 
 int main(){
+	int n;
+	
+	while(scanf("%d", &n) && n!=0){
+		map<vi, int> m;
 		
+		int most = 0;
+		fori(i, 0, n){
+			vi v(5);
+			fori(j, 0, 5) scanf("%d", &v[j]);
+			sort(v.begin(), v.end());
+			m[v]++;
+			most = max(most, m[v]);			
+		}
+		int ans = 0;
+		for(auto p: m) if(p.ss == most) ans += most;
+		printf("%d\n", ans);
+	}
+			
 	return 0;
 }

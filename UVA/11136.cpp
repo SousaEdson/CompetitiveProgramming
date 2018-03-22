@@ -39,6 +39,31 @@ typedef vector<iii>  viii;
 ///////////////////////////////////////////////////////////////////////////////
 
 int main(){
+	int n;
+	
+	while(scanf("%d", &n) && n!=0){
+		multiset<ll> s;
+		ll ans = 0;
 		
+		fori(i, 0, n){
+			int k;
+			scanf("%d", &k);
+			fori(j, 0, k){
+				ll u;
+				scanf("%lld", &u);
+				s.insert(u);
+			}		
+			
+			auto a = s.begin();
+			auto b = s.end(); b--;
+			ans += (*b - *a);
+			
+			s.erase(a);
+			s.erase(b);		
+		}
+		
+		printf("%lld\n", ans);
+	}
+	
 	return 0;
 }
